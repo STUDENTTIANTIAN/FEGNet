@@ -1141,7 +1141,7 @@ class FEGNet(nn.Module):
         x_add = adjust_feature(x_eem, x_gbc)
         out = F.gelu(F.max_pool2d(self.ebn3(x_add), 2, 2))
         t3 = out
-        torch.add()
+        torch.add(t3,x_mamaba)
         out = F.gelu(F.max_pool2d(self.ebn4(self.encoder4(out)), 2, 2))
         t4 = out
         out = F.gelu(F.max_pool2d(self.ebn5(self.encoder5(out)), 2, 2))
